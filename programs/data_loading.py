@@ -88,7 +88,7 @@ def load_files():
         for i, key in tqdm(enumerate(files), desc="Loading Data", total=len(files)):
             my_bar.progress(i/6, text=progress_text)
             if key == 'bureau_balance':
-                files_dict[key] = pd.read_csv(path + files[key], index_col='SK_ID_BUREAU',nrows=10000)
+                files_dict[key] = pd.read_csv(path + files[key], index_col='SK_ID_BUREAU',nrows=100)
             else:
                 files_dict[key] = pd.read_csv(path + files[key], index_col='SK_ID_CURR')
             
